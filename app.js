@@ -61,7 +61,7 @@ function getTasks() {
 // Add task
 function addTask(e) {
   if (taskInput.value === '') {
-    alert('برای افزودن تسک در ابتدا تسک را وارد کنید');
+    alert('Please fill out the task field');
   } else {
     // Create li element
     const li = document.createElement('li');
@@ -111,7 +111,7 @@ function storeTaskInLocalStorage(task) {
 function removeTask(e) {
 
   if (e.target.classList.contains('delete-item')) {
-    if (confirm('آيا مطمن هستی برای حذف تسک')) {
+    if (confirm('Are you sure for deleting?')) {
       e.target.parentElement.remove();
       // Remove from LS
       removeTaskFromLocalStorage(e.target.parentElement);
